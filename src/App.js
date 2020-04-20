@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
+import { 
+  BrowserRouter as Router,
+  Route 
+} from "react-router-dom";
 import { random } from 'lodash';
 import { MDBBox } from 'mdbreact';
 import './styles/App.css';
 import NavBar from './components/NavBar';
-import Background from './images/background.jpg';
+import AncientBox from './components/AncientBox';
+import EnlightenmentBox from './components/EnlightenmentBox';
+import ModernBox from './components/ModernBox';
+import ArtistsBox from './components/ArtistsBox';
+import EntrepreneurBox from './components/EntrepreneurBox';
+import ScientistsBox from './components/ScientstsBox';
 import Button from './components/Button';
 import Categories from './components/Categories';
 import Wikipedia from './components/Wikipedia';
@@ -22,7 +31,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://gist.githubusercontent.com/jimmyb2508/b0601acd348790a3ac06aedf36e41885/raw/e3d5ba71374b10f72dd93ca752f6f0ce8368722d/quotes.json')
+    fetch('https://murmuring-depths-99830.herokuapp.com/quotes')
       .then(data => data.json())
       .then(quotes => this.setState({ quotes }, this.assignNewQuoteIndex));
   }
@@ -64,7 +73,27 @@ viewAllQuotes() {
         <div className="Quotes">
           <React.Fragment>
             <MDBBox>
-              <div
+            <Router>
+              <Route exact path="/ancient">
+                <AncientBox />
+              </Route>
+              <Route exact path="/enlightenment">
+                <EnlightenmentBox />
+              </Route>
+              <Route exact path="/modern">
+                <ModernBox />
+              </Route>
+              <Route exact path="/artists">
+                <ArtistsBox />
+              </Route>
+              <Route exact path="/entrepreneurs">
+                <EntrepreneurBox />
+              </Route>
+              <Route exact path="/scientists">
+                <ScientistsBox />
+              </Route>
+            </Router>
+              {/* <div
                 className="randomcontainer"
                 style={{ backgroundImage: `url(${Background})`}}>
                   <div className="random-quote">
@@ -73,7 +102,7 @@ viewAllQuotes() {
                   <div className="random-button">
                     <Button buttonDisplayName="Philosofind" clickHandler={this.assignNewQuoteIndex}/>
                   </div>
-              </div>
+              </div> */}
             </MDBBox>
           </React.Fragment>
         </div>

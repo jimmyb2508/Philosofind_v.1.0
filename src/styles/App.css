@@ -1,3 +1,11 @@
+.navbar {
+  max-height: 80px;
+  display:flex;
+}
+
+.logo {
+  margin-top: 0;
+}
 
 .headers {
   font-weight: bold;
@@ -14,15 +22,38 @@
   min-height: 100vh;
 }
 
+.artistscontainer {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+@media only screen and (min-width: 1100px) {
+
+.artistscontainer {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: calc(20%) calc(20%); 
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  }
+}
+
 .Main {
   margin-top: 100px;
 }
 
 .random-quote {
-  margin-top: 450px;
   color: #fff;
-  font-size: x-large;
-  position: absolute;
+  font-size: xx-large;
+  font-weight: bolder;
+  position: relative;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -33,7 +64,7 @@
   margin-top: 650px;
   color: #fff;
   font-size: medium;
-  position: relative;
+  position: absolute;
   justify-content: center;
   align-items: center;
   display: flex;
