@@ -21,46 +21,46 @@ import Books from './components/Books';
 import Footer from './components/Footer';
 
 class App extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       quotes: [],
-//       selectedQuoteIndex: null,
-//     }
-//     this.assignNewQuoteIndex = this.assignNewQuoteIndex.bind(this);
-//     this.selectQuoteIndex = this.generateNewQuoteIndex.bind(this);
-//   }
+  constructor(props) {
+    super(props);
+    this.state = {
+      quotes: [],
+      selectedQuoteIndex: null,
+    }
+    this.assignNewQuoteIndex = this.assignNewQuoteIndex.bind(this);
+    this.selectQuoteIndex = this.generateNewQuoteIndex.bind(this);
+  }
 
-//   componentDidMount() {
-//     fetch('https://murmuring-depths-99830.herokuapp.com/quotes')
-//       .then(data => data.json())
-//       .then(quotes => this.setState({ quotes }, this.assignNewQuoteIndex));
-//   }
+  componentDidMount() {
+    fetch('https://murmuring-depths-99830.herokuapp.com/quotes')
+      .then(data => data.json())
+      .then(quotes => this.setState({ quotes }, this.assignNewQuoteIndex));
+  }
 
-//   get selectedQuote() {
-//     if (!this.state.quotes.length || !Number.isInteger(this.state.selectedQuoteIndex)) {
-//       return undefined;
-//     }
-//     return this.state.quotes[this.state.selectedQuoteIndex];
-//   }
+  get selectedQuote() {
+    if (!this.state.quotes.length || !Number.isInteger(this.state.selectedQuoteIndex)) {
+      return undefined;
+    }
+    return this.state.quotes[this.state.selectedQuoteIndex];
+  }
 
-//   /* Returns an integer representing an index in state.quotes*/
-//   /* If state.quotes is empty then it returns undefined */
+  /* Returns an integer representing an index in state.quotes*/
+  /* If state.quotes is empty then it returns undefined */
 
-//   generateNewQuoteIndex() {
-//     if (!this.state.quotes.length) {
-//       return undefined;
-//     }
-//     return random(0, this.state.quotes.length -1);
-//   }
+  generateNewQuoteIndex() {
+    if (!this.state.quotes.length) {
+      return undefined;
+    }
+    return random(0, this.state.quotes.length -1);
+  }
 
-// assignNewQuoteIndex() {
-//   this.setState({ selectedQuoteIndex: this.generateNewQuoteIndex() });
-// }
+assignNewQuoteIndex() {
+  this.setState({ selectedQuoteIndex: this.generateNewQuoteIndex() });
+}
 
-// viewAllQuotes() {
-//   this.setState({ });
-// }
+viewAllQuotes() {
+  this.setState({ });
+}
 
   render() {
     return (
