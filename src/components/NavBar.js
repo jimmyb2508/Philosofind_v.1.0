@@ -6,12 +6,10 @@ MDBNavbarToggler,
 MDBCollapse, 
 MDBNavbarNav,
 MDBNavItem,
-MDBNavLink,
 MDBDropdown,
 MDBDropdownToggle,
 MDBDropdownMenu,
 MDBDropdownItem,
-MDBFormInline
 } from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
 import Logo from '../images/logo.png';
@@ -36,10 +34,10 @@ render() {
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-          <MDBNavbarNav left>
+          <MDBNavbarNav right>
             <MDBNavItem>
               <MDBDropdown>
-                <MDBDropdownToggle nav caret>
+                <MDBDropdownToggle className="white" nav caret>
                   <span className="mr-2">Categories</span>
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
@@ -49,13 +47,9 @@ render() {
                   <MDBDropdownItem href="/artists">Aritsts</MDBDropdownItem>
                   <MDBDropdownItem href="/entrepreneurs">Entrepreneurs</MDBDropdownItem>
                   <MDBDropdownItem href="/scientists">Scientists</MDBDropdownItem>
+                  <MDBDropdownItem href="/api">API</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
-            </MDBNavItem>
-          </MDBNavbarNav>
-          <MDBNavbarNav right>
-            <MDBNavItem>
-                <MDBNavLink to="#!">API</MDBNavLink>
             </MDBNavItem>
           </MDBNavbarNav>
         </MDBCollapse>
