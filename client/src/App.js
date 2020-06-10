@@ -14,6 +14,8 @@ import EntrepreneurBox from './components/EntrepreneurBox';
 import ScientistsBox from './components/ScientstsBox';
 import APIBox from './components/APIBox';
 import Categories from './components/Categories';
+import PhilosofindAllQuotes from './components/PhilosofindAllQuotes';
+import AllQuotesButton from './components/AllQuotesButton';
 import Wikipedia from './components/Wikipedia';
 import Books from './components/Books';
 import Footer from './components/Footer';
@@ -66,6 +68,11 @@ class App extends Component {
         </div>
         <div className="categories">
           <Categories />
+        </div>
+        <div className="all-quotes">
+          <AllQuotesButton className="all-quotes-button">
+            <PhilosofindAllQuotes className="all-quotes-show" />
+          </AllQuotesButton>
         </div>
         <div className="wikipedia">
           <Wikipedia />
