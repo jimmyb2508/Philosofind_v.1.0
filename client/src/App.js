@@ -20,7 +20,7 @@ import CategoriesModern from './components/Categories/CategoriesModern';
 import CategoriesArtists from './components/Categories/CategoriesArtists';
 import CategoriesScientists from './components/Categories/CategoriesScientists';
 import PhilosofindAllQuotes from './components/AllQuotes/PhilosofindAllQuotes';
-import AncientAllQuotes from './components/AllQuotes/AllQuotesButton';
+import AncientAllQuotes from './components/AllQuotes/AncientAllQuotes';
 import EnlightenmentAllQuotes from './components/AllQuotes/EnlightenmentQuotes';
 import ModernAllQuotes from './components/AllQuotes/ModernAllQuotes';
 import ArtistsAllQuotes from './components/AllQuotes/ArtistsAllQuotes';
