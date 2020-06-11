@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../styles/AllQuotesButton.css';
+import '../../styles/AllQuotesButton.css';
 
 class AllQuotesButton extends React.Component {
 

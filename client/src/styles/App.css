@@ -145,6 +145,10 @@
   text-align: center;
 }
 
+.adjective {
+  font-style: italic;
+}
+
 .wikipedia {
   position: relative;
   padding-top: 0.5rem;

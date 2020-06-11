@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 
-import '../styles/PhilosofindAllQuotes.css';
+import '../../styles/PhilosofindAllQuotes.css';
 
 class PhilosofindAllQuotes extends Component {
   constructor(props){
