@@ -1,5 +1,4 @@
 import RandomQuote from '../components/RandomQuote';
-import QuoteCard from '../components/QuoteCard';
 import React from 'react';
 import { shallow } from 'enzyme';
 
