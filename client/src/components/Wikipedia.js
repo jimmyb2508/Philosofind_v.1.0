@@ -1,5 +1,9 @@
 import React from 'react';
 import Wiki from '../images/Wiki.png';
+import Background from '../images/entrepreneurBG.jpg';
+
+import '../styles/sass/layout/_wikipedia.scss';
+import '../styles/sass/components/_button.scss';
 
 class Wikipedia extends React.Component {
   constructor(props) {
@@ -86,26 +90,25 @@ class Wikipedia extends React.Component {
   }
 
   render() {
-    let wikiSearchResults = [];
-    // console.log(this.state.wikiSearchReturnValues);
+    let wikiSearchResults = [''];
 
     for (var key3 in this.state.wikiSearchReturnValues) {
       wikiSearchResults.push(
         <div className="searchResultDiv" key={key3}>
           <h3><a href={this.state.wikiSearchReturnValues[key3].queryResultPageFullURL}>{this.state.wikiSearchReturnValues[key3].queryResultPageTitle}</a></h3>
           <span className='link'><a href={this.state.wikiSearchReturnValues[key3].queryResultPageFullURL}>{this.state.wikiSearchReturnValues[key3].queryResultPageFullURL}</a></span>
-          <p className="description" dangerouslySetInnerHTML={{__html: this.state.wikiSearchReturnValues[key3].queryResultPageSnippet}}></p>
+          <p className="description" dangerouslySetInnerHTML={{ __html: this.state.wikiSearchReturnValues[key3].queryResultPageSnippet }}></p>
         </div>
       );
     }
 
     return (
-      <div className="Wikipedia">
-            <form action="" className="wikisearch">
-              <input className="" type="text" value={this.state.WikiSearchTerms || ''} onChange={this.changeWikiSearchTerms} placeholder='Search Wikipedia Articles' size="25" />
-              <button type='submit' onClick={this.useWikiSearchEngine}>Search</button>
-            </form>
-          {wikiSearchResults}
+      <div className="wikipedia" style={{ backgroundImage: `url(${Background})` }}>
+        <form action="" className="wikipedia__wikisearch">
+          <input className="" type="text" value={this.state.WikiSearchTerms || ''} onChange={this.changeWikiSearchTerms} placeholder='Search Wikipedia Articles' size="20" />
+          <button className="searchbtn" type='submit' onClick={this.useWikiSearchEngine}>Search</button>
+        </form>
+        {wikiSearchResults}
         <img src={Wiki} alt="wikipedia-logo" height="250px" width="200px" ></img>
       </div>
     );

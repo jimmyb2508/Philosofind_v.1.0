@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { 
+import {
   BrowserRouter as Router,
-  Route 
+  Route
 } from "react-router-dom";
 import { MDBBox } from 'mdbreact';
 import NavBar from './components/NavBar';
@@ -31,52 +31,51 @@ import Wikipedia from './components/Wikipedia';
 import Books from './components/Books';
 import Footer from './components/Footer';
 
-import './styles/App.css';
 import CategoriesEntrepreneurs from './components/Categories/CategoriesEntrepreneurs';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        
+
         <div className="NavBar">
           <NavBar />
-            <div className="Header">
+          <div className="Header">
           </div>
         </div>
         <div className="Body">
-        <div className="Quotes">
-          <React.Fragment>
-            <MDBBox>
-            <Router>
-              <Route exact path="/">
-                <PhilosofindBox />
-              </Route>
-              <Route exact path="/ancient">
-                <AncientBox />
-              </Route>
-              <Route exact path="/enlightenment">
-                <EnlightenmentBox />
-              </Route>
-              <Route exact path="/modern">
-                <ModernBox />
-              </Route>
-              <Route exact path="/artists">
-                <ArtistsBox />
-              </Route>
-              <Route exact path="/entrepreneurs">
-                <EntrepreneurBox />
-              </Route>
-              <Route exact path="/scientists">
-                <ScientistsBox />
-              </Route>
-              <Route exact path="/api">
-                <APIBox />
-              </Route>
-            </Router>
-            </MDBBox>
-          </React.Fragment>
-        </div>
+          <div className="Quotes">
+            <React.Fragment>
+              <MDBBox>
+                <Router>
+                  <Route exact path="/">
+                    <PhilosofindBox />
+                  </Route>
+                  <Route exact path="/ancient">
+                    <AncientBox />
+                  </Route>
+                  <Route exact path="/enlightenment">
+                    <EnlightenmentBox />
+                  </Route>
+                  <Route exact path="/modern">
+                    <ModernBox />
+                  </Route>
+                  <Route exact path="/artists">
+                    <ArtistsBox />
+                  </Route>
+                  <Route exact path="/entrepreneurs">
+                    <EntrepreneurBox />
+                  </Route>
+                  <Route exact path="/scientists">
+                    <ScientistsBox />
+                  </Route>
+                  <Route exact path="/api">
+                    <APIBox />
+                  </Route>
+                </Router>
+              </MDBBox>
+            </React.Fragment>
+          </div>
         </div>
         <Router>
           <Route exact path="/">
@@ -95,7 +94,7 @@ class App extends Component {
             </div>
           </Route>
           <Route exact path="/modern">
-          <div className="categories-modern">
+            <div className="categories-modern">
               <CategoriesModern />
             </div>
           </Route>
