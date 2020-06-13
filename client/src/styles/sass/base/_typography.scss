@@ -1,0 +1,11 @@
+h2 {
+    display: flex;
+    margin-left: .5rem;
+    transform: translateY(-2.5rem);
+
+    @media only screen and (max-width: 510px) {
+        transform: none;
+        justify-content: center;
+        transform: translateY(.8rem);
+    }
+}
