@@ -28,7 +28,7 @@ class EntrepreneursAllQuotes extends Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <div className="allquotes__wrapper">
         <ul>
           {this.state.quotes.map(quote => (
             <li key={quote._id}>{quote.quote} - {quote.author}</li>

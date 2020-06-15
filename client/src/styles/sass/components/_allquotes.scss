@@ -1,10 +1,17 @@
 .allquote {
-  
-
   &__container {
     padding-bottom: 4rem;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__content {
+    
+  }
+
+  &__wrapper {
+
   }
   
   li {
