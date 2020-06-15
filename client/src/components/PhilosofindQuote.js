@@ -45,11 +45,7 @@ class PhilosofindQuote extends Component {
         </div>
         <div className="buttons">
           <Button buttonDisplayName="Philosofind" clickHandler={this.getNewQuote} />
-<<<<<<< HEAD
-          <TwitterShare quote={quote} author={author}/>
-=======
           <TwitterShare quote={quote} author={author} />
->>>>>>> 696f35bde6f62bea5d05397556bf8d2592620ec8
         </div>
       </div>
     )

@@ -116,49 +116,49 @@ class App extends Component {
         </Router>
         <Router>
           <Route exact path="/">
-            <div className="all-quotes">
+            <div className="allquote">
               <AllQuotesButton className="all-quotes-button">
                 <PhilosofindAllQuotes className="all-quotes-show" />
               </AllQuotesButton>
             </div>
           </Route>
           <Route exact path="/ancient">
-            <div className="all-quotes">
+            <div className="allquote">
               <AllQuotesButton className="all-quotes-button">
                 <AncientAllQuotes className="all-quotes-show" />
               </AllQuotesButton>
             </div>
           </Route>
           <Route exact path="/enlightenment">
-            <div className="all-quotes">
+            <div className="allquote">
               <AllQuotesButton className="all-quotes-button">
                 <EnlightenmentAllQuotes className="all-quotes-show" />
               </AllQuotesButton>
             </div>
           </Route>
           <Route exact path="/modern">
-            <div className="all-quotes">
+            <div className="allquote">
               <AllQuotesButton className="all-quotes-button">
                 <ModernAllQuotes className="all-quotes-show" />
               </AllQuotesButton>
             </div>
           </Route>
           <Route exact path="/artists">
-            <div className="all-quotes">
+            <div className="allquote">
               <AllQuotesButton className="all-quotes-button">
                 <ArtistsAllQuotes className="all-quotes-show" />
               </AllQuotesButton>
             </div>
           </Route>
           <Route exact path="/entrepreneurs">
-            <div className="all-quotes">
+            <div className="allquote">
               <AllQuotesButton className="all-quotes-button">
                 <EntrepreneursAllQuotes className="all-quotes-show" />
               </AllQuotesButton>
             </div>
           </Route>
           <Route exact path="/scientists">
-            <div className="all-quotes">
+            <div className="allquote">
               <AllQuotesButton className="all-quotes-button">
                 <ScientistsAllQuotes className="all-quotes-show" />
               </AllQuotesButton>
@@ -168,7 +168,7 @@ class App extends Component {
         <div className="wikipedia">
           <Wikipedia />
         </div>
-        <div className="booksearch">
+        <div className="google">
           <Books />
         </div>
         <div className="footer">
