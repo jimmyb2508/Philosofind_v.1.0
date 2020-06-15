@@ -39,21 +39,22 @@ const Books = () => {
 
   return (
     <section>
-      <div>
-        <img src={Google} alt="" height="117px" width="340px" ></img>
-      </div>
-      <br></br>
-      <form onSubmit={onSubmitHandler}>
-        <label>
+      <div className="google">
+        <form className="google__googlesearch" onSubmit={onSubmitHandler}>
           <input
             type="search"
             placeholder="Search for Books"
             value={searchTerm}
             onChange={onInputChange}
           />
-          <button type="submit">Search</button>
-        </label>
-      </form>
+          <button className="searchbtn" type="submit">Search</button>
+        </form>
+        <div>
+          <img src={Google} alt="" height="117px" width="340px" ></img>
+        </div>
+        <br></br>
+
+      </div>
       <ul>
         {books.items.map((book, index) => {
           return (

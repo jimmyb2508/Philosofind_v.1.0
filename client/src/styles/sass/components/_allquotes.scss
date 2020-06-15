@@ -1,0 +1,14 @@
+.allquote {
+  
+
+  &__container {
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  li {
+    font-family: 'sans-serif', sans-serif;
+    text-align: center;
+  }
+}
