@@ -40,7 +40,6 @@
     text-decoration: none;
     text-transform: uppercase;
     outline: none;
-    background-color: #fff;
     padding: .23rem 2rem;
     border-radius: 500px;
     transition: all .3s;
@@ -65,4 +64,36 @@
 .searchbtn:focus {
     outline: 0;
 }
+
+.allquotebtn, 
+.allquotebtn:visited {
+    color: #fff;
+    margin-top: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+    background-color: black;
+    padding: 15px 40px;
+    border-radius: 500px;
+    transition: all .3s;
+    border: none;
+    width: 250px; 
+    margin: 0 auto; 
+    display: block;
+    cursor: pointer;
+  } 
+
+  .allquotebtn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.5);
+  }
+
+  .allquotebtn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  }
+
+  .allquotebtn:focus {
+    outline:0;
+  }
 

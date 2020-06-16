@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 
-import '../../styles/PhilosofindAllQuotes.css';
+import '../../styles/sass/components/_allquotes.scss'
 
 class ScientistsAllQuotes extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       quotes: []
@@ -28,12 +28,12 @@ class ScientistsAllQuotes extends Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <div className="allquotes__wrapper">
         <ul>
-            {this.state.quotes.map(quote => (
+          {this.state.quotes.map(quote => (
             <li key={quote._id}>{quote.quote} - {quote.author}</li>
-            ))}
-        </ul> 
+          ))}
+        </ul>
       </div>
     )
   }

@@ -1,27 +1,24 @@
 ul {
     list-style-type: none;
 }
-  
-  img {
+
+img {
   margin-top: 15px;
   margin-bottom: 5px;
 }
 
-label {
-  display: flex;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.booksearch {
-  margin-top: 15px;
-  position: relative;
-  padding-top: 0.5rem;
+.google {
   padding-bottom: 0.5rem;
-  margin-bottom: 0px;
   background-color: #fff ;
   text-align: center;
   list-style-type: none;
+
+  &__googlesearch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    left: 50px;
+  }
 }
