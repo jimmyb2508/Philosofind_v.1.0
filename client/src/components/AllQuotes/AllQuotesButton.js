@@ -32,16 +32,16 @@ class AllQuotesButton extends React.Component {
 		}
 
 		return (
-			<div className="allquote__container">
-				<button className="allquotebtn" onClick={this.toggleBox}>
-					{title}
-				</button>
-				{opened && (
-					<div class="allquote__content">
-						{children}
-					</div>
-				)}
-			</div>
+			<>
+				<div className="allquote__container">
+					<button className="allquotebtn" onClick={this.toggleBox}>{title}</button>
+					{opened && (
+						<div class="allquote__content">
+							{children}
+						</div>
+					)}
+				</div>
+			</>
 		);
 	}
 }

@@ -1,13 +1,12 @@
 .allquote {
+    // display: flex;
+    // justify-content: center;
   &__container {
     padding-bottom: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
   }
 
   &__content {
-    
+    padding-top: 2rem;
   }
 
   &__wrapper {
