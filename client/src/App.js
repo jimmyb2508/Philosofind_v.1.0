@@ -41,24 +41,19 @@ import Footer from './components/Footer';
 
 
 import ancientBG from '../src/images/ancientBG.jpg'
-import andromedaBG from '../src/images/andromedaBG.jpeg'
 import artistsBG from '../src/images/artistsBG.jpg'
-import earthBG from '../src/images/earthBG.jpeg'
 import enlightenmentBG from '../src/images/enlightenmentBG.jpg'
 import modernBG from '../src/images/modernBG.jpg'
-import moonBG from '../src/images/moonBG.jpeg'
-import nebulaBG from '../src/images/nebulaBG.jpeg'
 import philosofindBG from '../src/images/philosofindBG.jpg'
 import romanBG from '../src/images/romanBG.jpeg'
 import scientistsBG from '../src/images/scientistsBG.jpg'
-import sunsetBG from '../src/images/sunsetBG.jpeg'
 
 class App extends Component {
   render() {
     return (
       <>
         <BackgroundSlider
-          images={[ancientBG, andromedaBG, artistsBG, enlightenmentBG, earthBG, modernBG, moonBG, nebulaBG, philosofindBG, romanBG, scientistsBG, sunsetBG]}
+          images={[ancientBG, artistsBG, enlightenmentBG, modernBG, philosofindBG, romanBG, scientistsBG]}
           duration={10} transition={3} />
         <div className="App">
 
