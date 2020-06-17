@@ -3,7 +3,7 @@ import Axios from 'axios';
 import Button from './Button';
 import TwitterShare from './TwitterShare';
 
-import '../styles/App.css';
+import '../styles/sass/pages/_home.scss';
 
 class PhilosofindQuote extends Component {
   constructor(props) {
@@ -36,9 +36,9 @@ class PhilosofindQuote extends Component {
     this.getQuote()
   }
 
-render() {
-  const { quote, author } = this.state
-  return(
+  render() {
+    const { quote, author } = this.state
+    return (
       <div id="wrapper">
         <div>
           <h1 className="randomquote">{quote} - {author}</h1>
