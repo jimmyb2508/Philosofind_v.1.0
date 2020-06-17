@@ -21,8 +21,14 @@ import CategoriesEnlightenment from './components/Categories/CategoriesEnlighten
 import CategoriesModern from './components/Categories/CategoriesModern';
 import CategoriesArtists from './components/Categories/CategoriesArtists';
 import CategoriesScientists from './components/Categories/CategoriesScientists';
+import AncientAuthor from './components/AuthorDropDown/AncientAuthor';
+import EnlightenmentAuthor from './components/AuthorDropDown/EnlightenmentAuthor';
+import ModernAuthor from './components/AuthorDropDown/ModernAuthor';
+import ArtistsAuthor from './components/AuthorDropDown/ArtistsAuthor';
+import EntrepreneursAuthor from './components/AuthorDropDown/EntrepreneursAuthor';
+import ScientistsAuthor from './components/AuthorDropDown/ScientistsAuthor';
 import PhilosofindAllQuotes from './components/AllQuotes/PhilosofindAllQuotes';
-import AncientAllQuotes from './components/AllQuotes/AllQuotesButton';
+import AncientAllQuotes from './components/AllQuotes/AncientAllQuotes';
 import EnlightenmentAllQuotes from './components/AllQuotes/EnlightenmentQuotes';
 import ModernAllQuotes from './components/AllQuotes/ModernAllQuotes';
 import ArtistsAllQuotes from './components/AllQuotes/ArtistsAllQuotes';
@@ -129,6 +135,38 @@ class App extends Component {
             <Route exact path="/scientists">
               <div className="categories-scientists">
                 <CategoriesScientists />
+              </div>
+            </Route>
+          </Router>
+          <Router>
+            <Route exact path="/ancient">
+              <div className="ancient-author">
+                <AncientAuthor />
+              </div>
+            </Route>
+            <Route exact path="/enlightenment">
+              <div className="enlightenment-author">
+                <EnlightenmentAuthor />
+              </div>
+            </Route>
+            <Route exact path="/modern">
+              <div className="modern-author">
+                <ModernAuthor />
+              </div>
+            </Route>
+            <Route exact path="/artists">
+              <div className="artists-author">
+                <ArtistsAuthor />
+              </div>
+            </Route>
+            <Route exact path="/entrepreneurs">
+              <div className="entrepreneurs-author">
+                <EntrepreneursAuthor />
+              </div>
+            </Route>
+            <Route exact path="/scientists">
+              <div className="scientists-author">
+                <ScientistsAuthor />
               </div>
             </Route>
           </Router>
