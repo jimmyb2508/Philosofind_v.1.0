@@ -36,7 +36,7 @@ class AllQuotesButton extends React.Component {
 				<div className="allquote__container">
 					<button className="allquotebtn" onClick={this.toggleBox}>{title}</button>
 					{opened && (
-						<div class="allquote__content">
+						<div className="allquote__content">
 							{children}
 						</div>
 					)}
