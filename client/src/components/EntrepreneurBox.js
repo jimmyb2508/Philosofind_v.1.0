@@ -1,18 +1,23 @@
-import React from 'react'
-import Background from '../images/entrepreneurBG.jpg';
+import React from 'react';
+import BackgroundSlider from 'react-background-slider';
 import EntrepreneurQuote from './EntrepreneurQuote';
+import entrepreneurBG from '../images/entrepreneurBG.jpg';
 
 import '../styles/sass/layout/_categories.scss';
 
 const EntrepreneurBox = () => {
   return (
-    <div
-      className="randomcontainer"
-      style={{
-        backgroundImage: `url(${Background})`
-      }}>
-      <EntrepreneurQuote className="EntrepreneurQuote" />
-    </div>
+    <>
+      <BackgroundSlider
+        className="background_image"
+        images={[entrepreneurBG]}
+        duration={10}
+        transition={3}
+      />
+      <div className="randomcontainer">
+        <EntrepreneurQuote className="EntrepreneurQuote" />
+      </div>
+    </>
   )
 }
 
