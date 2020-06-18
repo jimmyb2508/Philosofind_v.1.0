@@ -52,11 +52,10 @@ class App extends Component {
   render() {
     return (
       <>
-        <BackgroundSlider
+        <BackgroundSlider className="background_image"
           images={[ancientBG, artistsBG, enlightenmentBG, modernBG, philosofindBG, romanBG, scientistsBG]}
           duration={10} transition={3} />
         <div className="App">
-
           <div className="NavBar">
             <NavBar />
             <div className="Header">
@@ -135,32 +134,32 @@ class App extends Component {
           </Router>
           <Router>
             <Route exact path="/ancient">
-              <div className="ancient-author">
+              <div className="author__ancient">
                 <AncientAuthor />
               </div>
             </Route>
             <Route exact path="/enlightenment">
-              <div className="enlightenment-author">
+              <div className="author__enlightenment">
                 <EnlightenmentAuthor />
               </div>
             </Route>
             <Route exact path="/modern">
-              <div className="modern-author">
+              <div className="author__modern">
                 <ModernAuthor />
               </div>
             </Route>
             <Route exact path="/artists">
-              <div className="artists-author">
+              <div className="author__artists">
                 <ArtistsAuthor />
               </div>
             </Route>
             <Route exact path="/entrepreneurs">
-              <div className="entrepreneurs-author">
+              <div className="author__entrepreneurs">
                 <EntrepreneursAuthor />
               </div>
             </Route>
             <Route exact path="/scientists">
-              <div className="scientists-author">
+              <div className="author__scientists">
                 <ScientistsAuthor />
               </div>
             </Route>

@@ -1,18 +1,23 @@
 import React from 'react'
-import Background from '../images/philosofindBG.jpg';
+import BackgroundSlider from 'react-background-slider';
 import EnlightenmentQuote from './EnlightenmentQuote';
+import philosofindBG from '../images/philosofindBG.jpg';
 
 import '../styles/sass/layout/_categories.scss';
 
 const EnlightenmentBox = () => {
   return (
-    <div
-      className="randomcontainer"
-      style={{
-        backgroundImage: `url(${Background})`
-      }}>
-      <EnlightenmentQuote className="EnlightenmentQuote" />
-    </div>
+    <>
+      <BackgroundSlider
+        className="background_image"
+        images={[philosofindBG]}
+        duration={10}
+        transition={3}
+      />
+      <div className="randomcontainer">
+        <EnlightenmentQuote className="EnlightenmentQuote" />
+      </div>
+    </>
   )
 }
 
