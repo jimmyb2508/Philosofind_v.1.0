@@ -5,7 +5,7 @@ import '../styles/API.css';
 
 const APIBox = () => {
   return (
-    <React.Fragment>
+    <>
       <BackgroundSlider
         className="background_image"
         images={[]}
@@ -20,7 +20,6 @@ const APIBox = () => {
         </div>
 
         <div className="api-routes">
-
           <div className="json">
             <h2>JSON</h2>
             <p>Each quotation will look like this:</p>
@@ -50,8 +49,6 @@ const APIBox = () => {
             </div>
           </div>
 
-
-
           <div className="category-quotes">
             <h2>Fetch All Quotes in a Category</h2>
             <p>You can view all of the quotes in a given category by including the name of the category at the end of the URL.</p>
@@ -69,11 +66,9 @@ const APIBox = () => {
               <p>https://murmuring-depths-99830.herokuapp.com/quotes/ancient/random</p>
             </div>
           </div>
-
-
         </div>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 
