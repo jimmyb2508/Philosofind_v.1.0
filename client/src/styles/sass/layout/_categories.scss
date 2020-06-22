@@ -1,8 +1,7 @@
 .categories {
   position: relative;
-  padding-top: 0;
-  padding-bottom: 1.5rem;
-  border: 2px solid #fff;
+  padding: 1.5rem 0;
+  border: .2rem solid #fff;
   color: black;
   text-align: center;
   object-fit: cover;
@@ -17,8 +16,8 @@
   display: grid !important;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  column-gap: 20px;
-  row-gap: 20px;
+  column-gap: 2rem;
+  row-gap: 2rem;
 
   .ancient { 
     grid-area: 1 / 1 / 2 / 2; 
@@ -66,15 +65,3 @@
       grid-area: 3 / 2 / 4 / 3; 
     }
   }  
-
-  .col {
-    padding: 1rem;
-    border: 2px solid #fff;
-    color: black;
-    text-align: center;
-  }
-  
-  .category-header {
-    font-weight: bolder;
-  }
-  

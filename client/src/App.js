@@ -39,7 +39,6 @@ import Wikipedia from './components/Wikipedia';
 import Books from './components/Books';
 import Footer from './components/Footer';
 
-
 import ancientBG from '../src/images/ancientBG.jpg'
 import artistsBG from '../src/images/artistsBG.jpg'
 import enlightenmentBG from '../src/images/enlightenmentBG.jpg'
