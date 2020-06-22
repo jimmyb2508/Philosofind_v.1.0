@@ -15,7 +15,7 @@ const AncientBox = () => {
         className="background_image"
         images={[ancientBG, romanBG, buddhaBG]}
         duration={10}
-        transition={3}
+        transition={2}
       />
       <div className="randomcontainer">
         <AncientQuote className="AncientQuote" />

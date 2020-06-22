@@ -12,7 +12,7 @@ const EnlightenmentBox = () => {
         className="background_image"
         images={[philosofindBG]}
         duration={10}
-        transition={3}
+        transition={2}
       />
       <div className="randomcontainer">
         <EnlightenmentQuote className="EnlightenmentQuote" />
