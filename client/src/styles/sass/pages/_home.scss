@@ -2,11 +2,6 @@
     display: flex;
     justify-content: center;
     min-height: 110vh;
-    // clip-path: polygon(0 0, 100% 0, 100% 110vh, 0 100vh);
-
-    // @media only screen and (max-width: 510px) {
-    //   clip-path: none;
-    // }
   }
   
   .randomquote {
@@ -26,17 +21,12 @@
     @media only screen and (max-width: 900px) {
       font-size: 1.8rem;
     }
-    
 
     &__author {
       margin-top: 0;
       color: #fff;
       float: right;
     }
-  }
-  
-  .button {
-    position: relative;
   }
 
   .buttons {
@@ -46,14 +36,3 @@
     align-items: center;
   }
   
-  // @media only screen and (max-width: 600px) {
-  //   .randomcontainer {
-  //     align-items: center;
-  //     min-height: 100vh;
-  //     background-attachment: scroll
-  //   }
-  
-  //   .random-quote {
-  //     font-size: 1.6rem;
-  //   }
-  // }

@@ -12,7 +12,7 @@ const ArtistsBox = () => {
         className="background_image"
         images={[artistsBG]}
         duration={10}
-        transition={3}
+        transition={2}
       />
       <div className="randomcontainer">
         <ArtistsQuote className="ArtistsQuote" />
