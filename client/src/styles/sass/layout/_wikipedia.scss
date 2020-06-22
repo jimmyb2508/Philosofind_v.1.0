@@ -1,8 +1,6 @@
 .wikipedia {
   position: relative;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-bottom: 0px;
+  padding: 0.5rem 0;
   text-align: center;
   
   &__wikisearch {
@@ -10,7 +8,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
-    left: 50px;
+    padding-top: 1rem;
+    left: 5rem;
   }
 }

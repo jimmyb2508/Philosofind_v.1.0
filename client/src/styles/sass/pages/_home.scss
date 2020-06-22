@@ -1,17 +1,17 @@
 .randomcontainer {
     display: flex;
     justify-content: center;
-    min-height: 110vh;
+    min-height: 100vh;
   }
   
   .randomquote {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: 'Cinzel', serif;
-    margin-top: 15rem;
-    border-radius: 10px;
+    margin-top: 12rem;
+    border-radius: 1rem;
     max-width: 85vw;
     width: 55rem;
     background-color: rgba(0, 0, 0, .091);

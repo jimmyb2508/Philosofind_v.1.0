@@ -1,7 +1,7 @@
 import React from 'react'
 import BackgroundSlider from 'react-background-slider';
 
-import '../styles/API.css';
+import '../styles/sass/vendors/_api.scss';
 
 const APIBox = () => {
   return (
