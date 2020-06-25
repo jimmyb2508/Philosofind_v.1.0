@@ -176,6 +176,12 @@ class ModernAuthor extends React.Component {
                                                         console.log(res)
                                                         this.setState({ quotes: res.data })
                                                       })
+                                                    } else {
+                                                      if (event.target.value === 'Friedrich Engels') {
+                                                        axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Ludwig Wittgenstein`).then(res => {
+                                                          this.setState({ quotes: res.data})
+                                                        })
+                                                      }
                                                     }
                                                   }
                                                 }
@@ -222,6 +228,7 @@ class ModernAuthor extends React.Component {
             <option value="Daniel Bell">Daniel Bell</option>
             <option value="John Berger">John Berger</option>
             <option value="Albert Camus">Albert Camus</option>
+            <option value="Friedrich Engels">Friedrich Engels</option>
             <option value="Michel Foucault">Michel Foucault</option>
             <option value="Sigmund Freud">Sigmund Freud</option>
             <option value="Germaine Greer">Germaine Greer</option>

@@ -42,10 +42,9 @@ import Footer from './components/Footer';
 
 import ancientBG from '../src/images/ancientBG.jpg'
 import artistsBG from '../src/images/artistsBG.jpg'
-import enlightenmentBG from '../src/images/enlightenmentBG.jpg'
+import enlightenment_BG from '../src/images/enlightenment_BG.jpg'
 import modernBG from '../src/images/modernBG.jpg'
 import philosofindBG from '../src/images/philosofindBG.jpg'
-import romanBG from '../src/images/romanBG.jpeg'
 import scientistsBG from '../src/images/scientistsBG.jpg'
 
 class App extends Component {
@@ -53,7 +52,7 @@ class App extends Component {
     return (
       <>
         <BackgroundSlider className="background_image"
-          images={[ancientBG, artistsBG, enlightenmentBG, modernBG, philosofindBG, romanBG, scientistsBG]}
+          images={[ancientBG, artistsBG, enlightenment_BG, modernBG, philosofindBG, scientistsBG]}
           duration={10} transition={3} />
         <div className="App">
           <div className="NavBar">

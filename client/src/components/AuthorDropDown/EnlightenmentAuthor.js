@@ -104,6 +104,18 @@ class EnlightenmentAuthor extends React.Component {
                                 console.log(res)
                                 this.setState({ quotes: res.data })
                               })
+                            } else {
+                              if (event.target.value === 'Blaise Pascal') {
+                                axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Blaise Pascal`).then(res => {
+                                  this.setState({ quotes: res.data })
+                                })
+                              } else {
+                                if (event.target.value === 'Francis Bacon') {
+                                  axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Blaise Pascal`).then(res => {
+                                    this.setState({ quotes: res.data})
+                                  })
+                                }
+                              }
                             }
                           }
                         }
@@ -134,6 +146,7 @@ class EnlightenmentAuthor extends React.Component {
             value={this.state.author}
             onChange={this.storeAuthor}>
             <option value="Select Author...">Select Author...</option>
+            <option value="Francis Bacon">Francis Bacon</option>
             <option value="Jeremy Bentham">Jeremy Bentham</option>
             <option value="Napoleon Bonaparte">Napoleon Bonaparte</option>
             <option value="Renee Descartes">Renee Descartes</option>
@@ -144,6 +157,7 @@ class EnlightenmentAuthor extends React.Component {
             <option value="Immanuel Kant">Immanuel Kant</option>
             <option value="Soren Kierkegaard">Soren Kierkegaard</option>
             <option value="Niccolo Machiavelli">Niccolo Machiavelli</option>
+            <option value="Blaise Pascal">Blaise Pascal</option>
             <option value="Jean-Jacques Rousseau">Jean-Jacques Rousseau</option>
             <option value="Adam Smith">Adam Smith</option>
             <option value="Voltaire">Voltaire</option>
