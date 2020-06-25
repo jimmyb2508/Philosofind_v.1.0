@@ -12,7 +12,7 @@ const ScientistsBox = () => {
         className="background_image"
         images={[scientistsBG]}
         duration={10}
-        transition={3}
+        transition={2}
       />
       <div className="randomcontainer">
         <ScientistsQuote className="ScientistsQuote" />

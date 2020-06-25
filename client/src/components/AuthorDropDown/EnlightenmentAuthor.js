@@ -112,7 +112,11 @@ class EnlightenmentAuthor extends React.Component {
                               } else {
                                 if (event.target.value === 'Francis Bacon') {
                                   axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Blaise Pascal`).then(res => {
+<<<<<<< HEAD
                                     this.setState({ quotes: res.data})
+=======
+                                    this.setState({ quotes: res.data })
+>>>>>>> master
                                   })
                                 }
                               }
