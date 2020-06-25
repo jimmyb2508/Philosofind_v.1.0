@@ -1,18 +1,24 @@
 import React from 'react'
-import Background from '../images/modernBG.jpg';
+import BackgroundSlider from 'react-background-slider';
 import ModernQuote from './ModernQuote';
+import modernBG from '../images/modernBG.jpg';
+import modernBG_2 from '../images/modernBG_2.jpg';
 
 import '../styles/sass/layout/_categories.scss';
 
 const ModernBox = () => {
   return (
-    <div
-      className="randomcontainer"
-      style={{
-        backgroundImage: `url(${Background})`
-      }}>
-      <ModernQuote className="ModernQuote" />
-    </div>
+    <>
+      <BackgroundSlider
+        className="background_image"
+        images={[modernBG, modernBG_2]}
+        duration={10}
+        transition={3}
+      />
+      <div className="randomcontainer">
+        <ModernQuote className="ModernQuote" />
+      </div>
+    </>
   )
 }
 

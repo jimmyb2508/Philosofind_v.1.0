@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://www.npr.org/player/embed/396688350/396976030 -->
+<html class=" js no-touch csstransforms3d video audio" lang="en" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./analytics.js"></script><script>(function(){function GrNBf() {
+  //<![CDATA[
+  window.xbqCkcq = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.sPoiVeW = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  
+  if (!['http:', 'https:'].includes(window.location.protocol)) {
+    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
+    window.Yyrdn = true;
+    window.XQgXU = 38.883333;
+    window.JxmMv = -77.000;
+  }
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.Yyrdn !== 'undefined')) {
+      if (window.Yyrdn === true) {
+        window.TNCPRGN({
+          coords: {
+            latitude: window.XQgXU,
+            longitude: window.JxmMv,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.xbqCkcq(window.TNCPRGN, window.MJzXSGG, window.DqThS);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.Yyrdn !== 'undefined')) {
+      if (window.Yyrdn === true) {
+        navigator.getCurrentPosition(window.uvKHGoP, window.CGswqjr, window.EbdVt);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.sPoiVeW(window.uvKHGoP, window.CGswqjr, window.EbdVt);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.TNCPRGN = successCallback;
+    window.MJzXSGG = errorCallback;
+    window.DqThS = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.uvKHGoP = successCallback;
+    window.CGswqjr = errorCallback;
+    window.EbdVt = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${GrNBf}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  Object.freeze(navigator.geolocation);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'zAulSCm':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.XQgXU = message.info.coords.lat;
+          window.JxmMv = message.info.coords.lon;
+          window.Yyrdn = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}GrNBf();})()</script><script>
+   try {var _sf_startpt=(new Date()).getTime();} catch(e){}
+</script>
+<meta itemscope="" itemtype="https://schema.org/SpeakableSpecification" itemref="speakable"><title>Embedded Player : NPR</title><meta id="speakable" itemprop="cssSelector" content="[data-is-speakable]"><meta id="google-site-verification" name="google-site-verification" content="1VqzbDm4ukeFVHOoq5LjIKA2fVKZD-EYv8cXZhKXSfU"><meta name="robots" content="noarchive,index,follow"><meta name="Rating" content="General"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="npr-pjax"><meta name="date" content="2020-06-19"><link rel="canonical" href="https://www.npr.org/2015/04/02/396688350/after-nazi-plunder-a-quest-to-bring-the-woman-in-gold-home"><meta name="description" content="A new movie tells the true story of Maria Altmann, who fought her way to the U.S. Supreme Court to force the Austrian government to return a painting of her aunt."><link rel="alternate" type="application/rss+xml" title="Arts &amp; Life" href="https://feeds.npr.org/1008/rss.xml"><link rel="alternate" type="application/json" title="Arts &amp; Life" href="https://feeds.npr.org/feeds/1008/feed.json"><link rel="apple-touch-icon" sizes="180x180" href="https://static-assets.npr.org/static/images/favicon/favicon-180x180.png"><link rel="icon" sizes="96x96" href="https://static-assets.npr.org/static/images/favicon/favicon-96x96.png"><link rel="icon" sizes="32x32" href="https://static-assets.npr.org/static/images/favicon/favicon-32x32.png"><link rel="icon" sizes="16x16" href="https://static-assets.npr.org/static/images/favicon/favicon-16x16.png"><meta property="og:title" content="After Nazi Plunder, A Quest To Bring Home The &#39;Woman In Gold&#39;"><meta property="og:url" content="https://www.npr.org/2015/04/02/396688350/after-nazi-plunder-a-quest-to-bring-the-woman-in-gold-home"><meta property="og:type" content="article"><meta property="og:description" content="A new movie tells the true story of Maria Altmann, who fought her way to the U.S. Supreme Court to force the Austrian government to return a painting of her aunt."><meta property="og:image" content="https://media.npr.org/assets/img/2015/04/01/woman-in-gold_wide-6b73b7e7c7e4f76858605598dfe06c33d34b9b9f.jpg?s=1400"><meta property="og:image" content="https://media.npr.org/assets/img/2015/04/01/ap06011603930_wide-c637e7bc22152eb3c402faaaf80b05c9dcd868ea.jpg?s=1400"><meta property="og:image" content="https://media.npr.org/assets/img/2015/03/31/womaningold1_wide-aab1a2a9405ddb961823717c04a1cf83c625ee66.jpg?s=1400"><meta property="og:site_name" content="NPR.org"><meta property="fb:app_id" content="138837436154588"><meta property="fb:pages" content="10643211755"><meta property="article:content_tier" content="free"><meta property="article:opinion" content="false"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="After Nazi Plunder, A Quest To Bring Home The &#39;Woman In Gold&#39;"><meta name="twitter:site" content="@NPR"><meta name="twitter:domain" content="npr.org"><meta name="twitter:image:src" content="https://media.npr.org/assets/img/2015/04/01/woman-in-gold_wide-6b73b7e7c7e4f76858605598dfe06c33d34b9b9f.jpg?s=1400"><script id="npr-vars">
+   window.NPR = window.NPR || {};
+NPR.ServerConstants = {"cbHost":"npr.org","webHost":"https:\/\/www.npr.org","legacyWebHost":"https:\/\/legacy.npr.org","embedHost":"https:\/\/www.npr.org","webHostSecure":"https:\/\/secure.npr.org","identityHost":"https:\/\/identity.api.npr.org","apiHost":"https:\/\/api.npr.org","serverMediaCache":"https:\/\/media.npr.org","googleAnalyticsAccount":"UA-5828686-74","nielsenSFCode":"dcr","nielsenAPN":"NPR-dcr","shouldShowHPLocalContent":true,"readingServiceHostname":"https:\/\/reading.api.npr.org","cookieDomain":".npr.org"};
+NPR.serverVars = {"storyId":"396688350","mediaId":"396976030","adEndpoint":"https:\/\/pubads.g.doubleclick.net\/gampad\/adx?iu=%2F6735%2F.n6735.NPR%2FArts___Life\u0026t=testserver%3Dfalse%26isPodcastEpisode%3Dfalse%26storyId%3D396688350%26program%3DMorning_Edition\u0026sz=160x78\u0026c=1861720447\u0026m=application%2Fjson","facebookAppId":"138837436154588","webpackPublicPath":"https:\/\/bundles.npr.org\/dist\/bundles\/","persistenceVersion":"179e6f832675870d9e9aab556b36d9f5","isBuildOut":true,"topicIds":["P1008","1001","1002","1003","1004","1045","1070","1124","1136"],"primaryTopic":"Arts \u0026 Life","topics":["Arts \u0026amp; Life","News","Home Page Top Stories","National","World","Movies","Law","Europe","History"],"theme":"1008","programId":"Morning Edition","program":"3","aggIds":["3","1001","1002","1003","1004","1008","1045","1070","1124","1136","396975944"],"byline":["Nina Totenberg"],"pubDate":"2015040204","pageTypeId":"1","title":"After Nazi Plunder, A Quest To Bring Home The \u0027Woman In Gold\u0027","publisherOrgId":"1"};
+</script>
+<script type="text/javascript" src="./11107397707.js">
+   </script>
+<script type="text/javascript" src="./modernizr.custom.js">
+   </script>
+<script>
+   !function(e){function a(c){if(b[c])return b[c].exports;var f=b[c]={exports:{},id:c,loaded:!1};return e[c].call(f.exports,f,f.exports,a),f.loaded=!0,f.exports}var c=window.webpackJsonp;window.webpackJsonp=function(d,t){for(var n,r,o=0,i=[];o<d.length;o++)r=d[o],f[r]&&i.push.apply(i,f[r]),f[r]=0;for(n in t)if(Object.prototype.hasOwnProperty.call(t,n)){var p=t[n];switch(typeof p){case"object":e[n]=function(a){var c=a.slice(1),b=a[0];return function(a,f,d){e[b].apply(this,[a,f,d].concat(c))}}(p);break;case"function":e[n]=p;break;default:e[n]=e[p]}}for(c&&c(d,t);i.length;)i.shift().call(null,a);if(t[0])return b[0]=0,a(0)};var b={},f={24:0};a.e=function(e,c){if(0===f[e])return c.call(null,a);if(void 0!==f[e])f[e].push(c);else{f[e]=[c];var b=document.getElementsByTagName("head")[0],d=document.createElement("script");d.type="text/javascript",d.charset="utf-8",d.async=!0,d.src=a.p+""+e+"."+{0:"5bd6b3180c229eb60c77",1:"1131a4e64b15fb4ef777",2:"4e84f778f0de814b760e",3:"f79cf6f46b6bc8acd6a9",4:"134cea78dda96cd85275",5:"4cced95f4f7647e17070",6:"1a2b528ad46e8d69b32c",7:"1f595370b3e6202cd3a1",8:"515e908d6bd772d0f6ad",9:"12e9564f5758bbe2dcba",10:"8d1e1090b9b30fa95f45",11:"bb18d11a7ed814618527",12:"80b990eac4b6df16ccbb",13:"fc930aee18ca7e600dde",14:"772447a74d64af2b85c7",15:"cdb4f056a9523bd2d0fa",16:"62c859ef06b1db720a32",17:"d835a5ea75bd5e19228a",18:"ce1e83c8d091bd245a24",19:"d0cdc401cb6489367a65",20:"d2ff12bd270a05873918",21:"f5ee5b00e6bb2a8772ef",22:"aa4a59617f9fa6bfc8a4",23:"e9786b2dec34f60c0dde",25:"7af95c17d7878b72d16f",26:"ca1e773578ab3efb1b38",27:"abe6179832b3ac5847bf",28:"c1ed623960959ee73fe2",29:"dafd2ebcdae6cf78567c",30:"db2773a605da47b263f0",31:"abab28e39eb3c9bc7378",32:"c24842e0045e3ee93187",33:"dc00c3563bfd359f0334",34:"b60f203ce7844f296378",35:"eb3ceb176b9f2b8809a3",36:"de61e37d46ec0eccc45d",37:"31237fce407d6ba986ec",38:"76bb1b9bdb3e3a7f5102",39:"a9bf54be8e9b002d6cc1",40:"8376d1b9e80ef2b0284b",41:"0b88ce5daadabde89762",42:"5487ee1c34281359ee35",43:"a86adb7beac86f16a18e",44:"ba9c06a4149cad48dcbf",45:"9fd2c81940ceb3680622",46:"b112eabd13c6cab6745a",47:"83b9ec4488ac8faab510",48:"1bd6a524f8134ee50a63",49:"7c2c886763c5ef1ff896",50:"f67da6382b540b78a392",51:"78d156b1a535e93e5801",52:"0333c6bddd36e8cb629e",53:"fb8d7a9d3c95991cffa4",54:"496ebf129eae7d318afc",55:"877ab31021db42da59f8",56:"5e75a90c554fbb11aeeb",57:"fcf950dc78f7fa51466f",58:"85e87471d8cde30dc345",59:"813e224e8325a28fc0fb",60:"be52a0a31c3ac2f95b71",61:"7111a197f89fecf11316",62:"0d93c90dbc5ab89d2165",63:"6323bd181105e92f23fc",64:"6c2124837cde28d92273",65:"5994eacddd64b70a201f",66:"fba0384c72edfe161d69",67:"ebbdb4b7122d50fdb6eb",68:"051ca9d36f55046b6cf0",69:"4533d7a9b6490434dc31",70:"ef23136fd2e3b109da9e",71:"1b5c706b510aa015ffcb",72:"14bdf7ffeea765f16aa1",73:"20d2b40f67b3570e83f9",74:"3d1121a225b11dc64020",75:"aaafd551fb020e6a8b19",76:"03259ba21cb48defeec0",77:"333e85b2285dfb018604",78:"12483caf40e264504473",79:"f17ba1fe364466496b63",80:"e4838b32abe4362f1af5",81:"3336b3066e59c14711ac",82:"ae88088384628f610fd3",83:"5ed45f6dfdcd2a9aef58"}[e]+".chunk.js",b.appendChild(d)}},a.m=e,a.c=b,a.p="/dist/bundles/"}(function(e){for(var a in e)if(Object.prototype.hasOwnProperty.call(e,a))switch(typeof e[a]){case"function":break;case"object":e[a]=function(a){var c=a.slice(1),b=e[a[0]];return function(e,a,f){b.apply(this,[e,a,f].concat(c))}}(e[a]);break;default:e[a]=e[e[a]]}return e}([]));
+</script>
+<script type="text/javascript" src="./globalNavigationDropdowns-abe6179832b3ac5847bf.js">
+   </script>
+<link rel="stylesheet" media="screen, print" href="./playerEmbed-css-62781ddc770c5d354b9c.css"><script type="application/ld+json">
+   {"@context":"https:\/\/schema.org","@type":"NewsArticle","publisher":{"@type":"Organization","name":"NPR","logo":{"@type":"ImageObject","url":"https:\/\/media.npr.org\/chrome\/npr-logo.jpg"}},"headline":"After Nazi Plunder, A Quest To Bring Home The 'Woman In Gold'","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.npr.org\/2015\/04\/02\/396688350\/after-nazi-plunder-a-quest-to-bring-the-woman-in-gold-home"},"datePublished":"2015-04-02T04:03:00-04:00","author":{"@type":"Person","name":["Nina Totenberg"]},"dateModified":"2015-04-07T15:43:00-04:00","description":"A new movie<em> <\/em>tells<em> <\/em>the true story of Maria Altmann, who fought her way to the U.S. Supreme Court to force the Austrian government to return a painting of her aunt.","image":["https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/woman-in-gold_custom-0d0243169ca8eef763686e144da1eda1ea27e7a9.jpg","https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/maria-altmann_custom-b26365a9daec9e686a06ae55305cf5ab31e48549.jpg","https:\/\/media.npr.org\/assets\/img\/2015\/03\/31\/ap050414125778_custom-1b04ff80877a0847cecc9612c0b70a1ed63b16e2.jpg","https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/ap06011603930_custom-092bcda3a4830bc99ac9f2fe53d0167fd88c009a.jpg","https:\/\/media.npr.org\/assets\/img\/2015\/03\/31\/womaningold1_wide-aab1a2a9405ddb961823717c04a1cf83c625ee66.jpg"]}
+</script>
+<script type="text/javascript">
+   document.domain="npr.org";
+</script>
+<script type="text/javascript" charset="utf-8" async="" src="./0.5bd6b3180c229eb60c77.chunk.js"></script><script type="text/javascript" charset="utf-8" async="" src="./3.f79cf6f46b6bc8acd6a9.chunk.js"></script></head><body id="player" class=" tmplPlayer  id396688350  " data-pjax-modules="app util/env images/lazy-load social/share" data-nav-overlay-menu-system="true"><div class="skip-links">
+      <span>Accessibility links</span>   <ul>
+            <li><a href="https://www.npr.org/player/embed/396688350/396976030#mainContent" class="skiplink">Skip to main content</a></li>
+      <li><a href="https://help.npr.org/contact/s/article?name=what-are-the-keyboard-shortcuts-for-using-the-npr-org-audio-player" class="skiplink">Keyboard shortcuts for audio player</a></li>
+   </ul>
+</div>
+<main aria-label="main content"><div class="speakable">
+      <b data-is-speakable="">Embedded Player</b>   <b data-is-speakable="">A new movie<em> </em>tells<em> </em>the true story of Maria Altmann, who fought her way to the U.S. Supreme Court to force the Austrian government to return a painting of her aunt.</b>
+</div>
+<input type="hidden" id="title396688350" value="After Nazi Plunder, A Quest To Bring Home The &#39;Woman In Gold&#39;">
+<input type="hidden" id="shortTitle396688350" value="After Nazi Plunder, A Quest To Bring Home The &#39;Woman In Gold&#39;">
+<input type="hidden" id="modelFullUrl396688350" value="https://www.npr.org/2015/04/02/396688350/after-nazi-plunder-a-quest-to-bring-the-woman-in-gold-home">
+<script type="text/javascript">var apiDoc = {"version":"0.94","list":{"title":{"$text":"Stories from NPR"},"teaser":{"$text":"Assorted stories from NPR"},"miniTeaser":{"$text":"Custom NPR News Feed API.  Visit https:\/\/www.npr.org\/templates\/apidoc\/index.php for more information."},"link":[{"type":"html","$text":"https:\/\/www.npr.org\/2015\/04\/02\/396688350\/after-nazi-plunder-a-quest-to-bring-the-woman-in-gold-home"}],"story":[{"id":"396688350","link":[{"type":"html","$text":"https:\/\/www.npr.org\/2015\/04\/02\/396688350\/after-nazi-plunder-a-quest-to-bring-the-woman-in-gold-home"}],"title":{"$text":"After Nazi Plunder, A Quest To Bring Home The 'Woman In Gold'"},"subtitle":[],"shortTitle":[],"slug":{"$text":"Arts & Life"},"storyDate":{"$text":"Thu, 02 Apr 2015 04:03:00 -0400"},"pubDate":{"$text":"Tue, 07 Apr 2015 15:43:00 -0400"},"lastModifiedDate":{"$text":"Tue, 07 Apr 2015 15:43:54 -0400"},"audioRunByDate":{"$text":"Sat, 04 Apr 2015 01:00:00 -0400"},"show":[{"program":{"id":"3","code":"ME","$text":"Morning Edition"},"showDate":{"$text":"Thu, 02 Apr 2015 05:00:00 -0400"},"segNum":{"$text":"8"}}],"organization":[{"orgId":"1","orgAbbr":"NPR","name":{"$text":"NPR"},"website":{"$text":"https:\/\/www.npr.org"}}],"parent":[{"id":"1008","type":"primaryTopic","slug":"true","title":{"$text":"Arts & Life"},"link":[{"type":"html","$text":"https:\/\/www.npr.org\/sections\/arts\/"}]},{"id":"396975944","type":"programEpisode","title":{"$text":"Morning Edition for April 2, 2015"},"link":[{"type":"html","$text":"https:\/\/www.npr.org\/programs\/morning-edition\/2015\/04\/02\/396975944\/morning-edition-for-april-2-2015"}]},{"id":"1136","type":"topic","title":{"$text":"History"},"link":[{"type":"html","$text":"https:\/\/www.npr.org\/sections\/history\/"}]},{"id":"1124","type":"topic","title":{"$text":"Europe"},"link":[{"type":"html","$text":"https:\/\/www.npr.org\/sections\/europe\/"}]},{"id":"1070","type":"topic","title":{"$text":"Law"},"link":[{"type":"html","$text":"https:\/\/www.npr.org\/sections\/law\/"}]},{"id":"1045","type":"topic","title":{"$text":"Movies"},"link":[{"type":"html","$text":"https:\/\/www.npr.org\/sections\/movies\/"}]},{"id":"1008","type":"topic","title":{"$text":"Arts & Life"},"link":[{"type":"html","$text":"https:\/\/www.npr.org\/sections\/arts\/"}]},{"id":"1004","type":"topic","title":{"$text":"World"},"link":[{"type":"html","$text":"https:\/\/www.npr.org\/sections\/world\/"}]},{"id":"1003","type":"topic","title":{"$text":"National"},"link":[{"type":"html","$text":"https:\/\/www.npr.org\/sections\/national\/"}]},{"id":"1002","type":"topic","title":{"$text":"Home Page Top Stories"},"link":[{"type":"html","$text":"https:\/\/www.npr.org\/"}]},{"id":"1001","type":"topic","title":{"$text":"News"},"link":[{"type":"html","$text":"https:\/\/www.npr.org\/sections\/news\/"}]},{"id":"3","type":"program","title":{"$text":"Morning Edition"},"link":[{"type":"html","$text":"https:\/\/www.npr.org\/programs\/morning-edition\/"}]}],"audio":[{"id":"396976030","type":"primary","title":[],"duration":{"$text":"445"},"description":[],"format":{"mp3":[{"type":"mp3","method":"fms","$text":"https:\/\/ondemand.npr.org\/anon.npr-mp3\/npr\/me\/2015\/04\/20150402_me_after_nazi_plunder_a_quest_to_bring_the_woman_in_gold_home.mp3?orgId=1&topicId=1008&d=445&p=3&story=396688350&dl=1"},{"type":"m3u","method":"fms","$text":"http:\/\/api.npr.org\/m3u\/1396976030-189eb7.m3u?orgId=1&topicId=1008&d=445&p=3&story=396688350"}],"wm":{"$text":"https:\/\/www.npr.org\/templates\/dmg\/dmg_wmref_em.php?id=396976030&type=1&mtype=WM&orgId=1&topicId=1008&d=445&p=3&story=396688350"},"threegp":{"$text":"https:\/\/ondemand.npr.org\/npr-3gp\/npr\/me\/2015\/04\/20150402_me_after_nazi_plunder_a_quest_to_bring_the_woman_in_gold_home.3gp?orgId=1&topicId=1008&d=445&p=3&story=396688350"},"mp4":{"$text":"https:\/\/ondemand.npr.org\/npr-mp4\/npr\/me\/2015\/04\/20150402_me_after_nazi_plunder_a_quest_to_bring_the_woman_in_gold_home.mp4?orgId=1&topicId=1008&d=445&p=3&story=396688350"},"hls":{"$text":"http:\/\/ivideo-i.akamaihd.net\/i\/npr-mp4\/npr\/me\/2015\/04\/20150402_me_after_nazi_plunder_a_quest_to_bring_the_woman_in_gold_home,,.mp4.csmil\/master.m3u8?orgId=1&topicId=1008&d=445&p=3&story=396688350"},"mediastream":{"$text":"rtmp:\/\/flash.npr.org\/ondemand\/mp3:anon.npr-mp3\/npr\/me\/2015\/04\/20150402_me_after_nazi_plunder_a_quest_to_bring_the_woman_in_gold_home.mp3"}},"region":{"$text":"all"},"rightsHolder":[],"permissions":{"download":{"allow":"true"},"stream":{"allow":"true"},"embed":{"allow":"true"}},"stream":{"active":"false"}}],"image":[{"id":"396812942","type":"primary","width":"200","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/woman-in-gold_custom-0d0243169ca8eef763686e144da1eda1ea27e7a9.jpg?s=12","hasBorder":"false","title":{"$text":"Maria Altmann fought her way to the U.S. Supreme Court to force the Austrian government to give back this painting by Gustav Klimt of her aunt, Adele Bloch-Bauer."},"caption":{"$text":"Maria Altmann fought her way to the U.S. Supreme Court to force the Austrian government to give back this painting by Gustav Klimt of her aunt, Adele Bloch-Bauer."},"link":{"url":""},"producer":{"$text":"DeAgostini"},"provider":{"url":"","$text":"Getty Images"},"copyright":[],"enlargement":{"src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/woman-in-gold_custom-0d0243169ca8eef763686e144da1eda1ea27e7a9.jpg","caption":[]},"crop":[{"type":"standard","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/woman-in-gold-6c650399978eada06139a8e34288a944e7031562.jpg","height":"1871","width":"2495"},{"type":"square","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/woman-in-gold_sq-6e3641e72f0c5f3a9c6003754937efacd8cda8c2.jpg","height":"1815","width":"1815"},{"type":"wide","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/woman-in-gold_wide-6b73b7e7c7e4f76858605598dfe06c33d34b9b9f.jpg","height":"1403","width":"2495"},{"type":"enlargement","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/woman-in-gold_custom-0d0243169ca8eef763686e144da1eda1ea27e7a9.jpg","height":"2500","width":"2495"},{"type":"custom","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/woman-in-gold_custom-0d0243169ca8eef763686e144da1eda1ea27e7a9.jpg","height":"2500","width":"2495","primary":"true"}]},{"id":"396814136","type":"standard","width":"200","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/maria-altmann_custom-b26365a9daec9e686a06ae55305cf5ab31e48549.jpg?s=12","hasBorder":"false","title":{"$text":"The last time Maria Altmann saw the Gustav Klimt paintings was when she was a child in Austria, before the Nazis took over in 1938 and ripped the precious works of art from her family. Earlier this year, an Austrian arbitration court ruled that five paintings by Klimt must be returned by the National Gallery in Vienna to Altmann, a retired clothing boutique owner."},"caption":{"$text":"The last time Maria Altmann saw the Gustav Klimt paintings was when she was a child in Austria, before the Nazis took over in 1938 and ripped the precious works of art from her family. Earlier this year, an Austrian arbitration court ruled that five paintings by Klimt must be returned by the National Gallery in Vienna to Altmann, a retired clothing boutique owner."},"link":{"url":""},"producer":{"$text":"Ric Francis"},"provider":{"url":"","$text":"AP"},"copyright":[],"enlargement":{"src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/maria-altmann_custom-b26365a9daec9e686a06ae55305cf5ab31e48549.jpg","caption":[]},"crop":[{"type":"standard","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/maria-altmann-f41a8e659803134df99889773dce90dd1d2b85be.jpg","height":"1503","width":"2003"},{"type":"square","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/maria-altmann_sq-a5aad05c2ac1958123190632baa80a6459e3c881.jpg","height":"2004","width":"2003"},{"type":"wide","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/maria-altmann_wide-800facee83a9adab526906d0ffc777855d9399a6.jpg","height":"1127","width":"2003"},{"type":"enlargement","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/maria-altmann_custom-b26365a9daec9e686a06ae55305cf5ab31e48549.jpg","height":"3000","width":"2003"},{"type":"custom","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/maria-altmann_custom-b26365a9daec9e686a06ae55305cf5ab31e48549.jpg","height":"3000","width":"2003","primary":"true"}]},{"id":"396690324","type":"standard","width":"200","src":"https:\/\/media.npr.org\/assets\/img\/2015\/03\/31\/ap050414125778_custom-1b04ff80877a0847cecc9612c0b70a1ed63b16e2.jpg?s=12","hasBorder":"false","title":{"$text":"Maria Altmann stands next to a print of a Gustav Klimt painting of her aunt, Portrait of Adele Bloch-Bauer I, at her home in Los Angeles in 2005. Altmann died in 2011."},"caption":{"$text":"Maria Altmann stands next to a print of a Gustav Klimt painting of her aunt, <em>Portrait of Adele Bloch-Bauer I<\/em>, at her home in Los Angeles in 2005. Altmann died in 2011."},"link":{"url":""},"producer":{"$text":"Reed Saxon"},"provider":{"url":"","$text":"AP"},"copyright":[],"crop":[{"type":"custom","src":"https:\/\/media.npr.org\/assets\/img\/2015\/03\/31\/ap050414125778_custom-1b04ff80877a0847cecc9612c0b70a1ed63b16e2.jpg","height":"2127","width":"1858","primary":"true"}]},{"id":"396866106","type":"standard","width":"200","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/ap06011603930_custom-092bcda3a4830bc99ac9f2fe53d0167fd88c009a.jpg?s=12","hasBorder":"false","title":{"$text":"Maria Altmann celebrates with family members in 2006 after an Austrian arbitration court determined the country is legally obligated to return the Gustav Klimt paintings to her."},"caption":{"$text":"Maria Altmann celebrates with family members in 2006 after an Austrian arbitration court determined the country is legally obligated to return the Gustav Klimt paintings to her."},"link":{"url":""},"producer":{"$text":"Nick Ut"},"provider":{"url":"","$text":"AP"},"copyright":[],"enlargement":{"src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/ap06011603930_custom-092bcda3a4830bc99ac9f2fe53d0167fd88c009a.jpg","caption":[]},"crop":[{"type":"standard","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/ap06011603930-3a01271300fdbd8e2015a9ece7b6d36febef095a.jpg","height":"1422","width":"1896"},{"type":"square","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/ap06011603930_sq-63250daee988f17768b63e7fe02a0d32e738595e.jpg","height":"948","width":"948"},{"type":"wide","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/ap06011603930_wide-c637e7bc22152eb3c402faaaf80b05c9dcd868ea.jpg","height":"1067","width":"1896"},{"type":"enlargement","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/ap06011603930_custom-092bcda3a4830bc99ac9f2fe53d0167fd88c009a.jpg","height":"1901","width":"1861"},{"type":"custom","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/ap06011603930_custom-092bcda3a4830bc99ac9f2fe53d0167fd88c009a.jpg","height":"1901","width":"1861","primary":"true"},{"type":"vertical","src":"https:\/\/media.npr.org\/assets\/img\/2015\/04\/01\/ap06011603930_vert-a6459025da04fe854e9d159ae962e482cb1384bb.jpg","height":"1264","width":"948"}]},{"id":"396691274","type":"standard","width":"200","src":"https:\/\/media.npr.org\/assets\/img\/2015\/03\/31\/womaningold1_wide-aab1a2a9405ddb961823717c04a1cf83c625ee66.jpg?s=12","hasBorder":"false","title":{"$text":"Academy Award-winning actress Helen Mirren plays Maria Altmann in Woman in Gold. "},"caption":{"$text":"Academy Award-winning actress Helen Mirren plays Maria Altmann in <em>Woman in Gold. <\/em>"},"link":{"url":""},"producer":{"$text":"Robert Viglasky"},"provider":{"url":"","$text":"The Weinstein Company"},"copyright":[],"enlargement":{"src":"https:\/\/media.npr.org\/assets\/img\/2015\/03\/31\/womaningold1-8a41b2935514a2f3bb7ec54d6a2fad43c3ef4e06.jpg","caption":[]},"crop":[{"type":"standard","src":"https:\/\/media.npr.org\/assets\/img\/2015\/03\/31\/womaningold1-8a41b2935514a2f3bb7ec54d6a2fad43c3ef4e06.jpg","height":"799","width":"1065"},{"type":"square","src":"https:\/\/media.npr.org\/assets\/img\/2015\/03\/31\/womaningold1_sq-5478ade2d85bbab7e9fb6df32e8ed8e702625302.jpg","height":"598","width":"598"},{"type":"wide","src":"https:\/\/media.npr.org\/assets\/img\/2015\/03\/31\/womaningold1_wide-aab1a2a9405ddb961823717c04a1cf83c625ee66.jpg","height":"675","width":"1200","primary":"true"},{"type":"enlargement","src":"https:\/\/media.npr.org\/assets\/img\/2015\/03\/31\/womaningold1-8a41b2935514a2f3bb7ec54d6a2fad43c3ef4e06.jpg","height":"799","width":"1065"},{"type":"vertical","src":"https:\/\/media.npr.org\/assets\/img\/2015\/03\/31\/womaningold1_vert-2020c98a4431bd149e9e216298abf0bd6183690d.jpg","height":"624","width":"468"}]},{"id":"636024364","type":"logo","width":"200","src":"https:\/\/media.npr.org\/assets\/img\/2018\/08\/06\/npr_me_podcasttile_sq-4036eb96471eeed96c37dfba404bb48ea798e78c.jpg?s=12","hasBorder":"false","title":{"$text":"Morning Edition"},"caption":[],"link":{"url":""},"producer":[],"provider":{"url":"","$text":"NPR"},"copyright":[],"crop":[{"type":"standard","src":"https:\/\/media.npr.org\/assets\/img\/2018\/08\/06\/npr_me_podcasttile-e5d6af23920061eba35b6388ab63627b642eeac2.jpg","height":"9375","width":"12501"},{"type":"square","src":"https:\/\/media.npr.org\/assets\/img\/2018\/08\/06\/npr_me_podcasttile_sq-4036eb96471eeed96c37dfba404bb48ea798e78c.jpg","height":"12501","width":"12501","primary":"true"},{"type":"wide","src":"https:\/\/media.npr.org\/assets\/img\/2018\/08\/06\/npr_me_podcasttile_wide-969cbfd2aafe6f86608c68c85211c5d7f586fed3.jpg","height":"7031","width":"12501"}]}]}]}};</script><div id="player-attach"><div data-reactroot=""><article class="player ratio4x3" id="player-main"><div id="audio-player" style="width: 0px; height: 0px;"></div><figure><a href="https://www.npr.org/2015/04/02/396688350/after-nazi-plunder-a-quest-to-bring-the-woman-in-gold-home" class="storyimage" target="_blank"><img src="./woman-in-gold-6c650399978eada06139a8e34288a944e7031562.jpg" alt="Maria Altmann fought her way to the U.S. Supreme Court to force the Austrian government to give back this painting by Gustav Klimt of her aunt, Adele Bloch-Bauer."></a><p class="credit">DeAgostini/Getty Images</p></figure><section class=""><header><a class="nprlogo news-logo" target="_blank" href="https://www.npr.org/2015/04/02/396688350/after-nazi-plunder-a-quest-to-bring-the-woman-in-gold-home"></a><a href="https://www.npr.org/player/embed/396688350/396976030#" class="share">Share</a></header><div class="story-meta"><h2 class="slug"><a target="_blank" href="https://www.npr.org/sections/arts/">Arts &amp; Life</a></h2><h1 class="title"><a target="_blank" href="https://www.npr.org/2015/04/02/396688350/after-nazi-plunder-a-quest-to-bring-the-woman-in-gold-home">After Nazi Plunder, A Quest To Bring Home The 'Woman In Gold'</a></h1></div><div class="playerinterface audio-available"><a href="https://www.npr.org/player/embed/396688350/396976030#" class="playbutton"></a><div class="progressbar"><div class="audioContent"><div class="cta-meta"><p class="cta">listen</p><p class="timestamp"><!-- react-text: 32 --><!-- /react-text --><b>7:25</b></p></div><b class="track"><b class="progress" style="width: 0%;"></b><b class="playhead" style="left: 0%;"></b></b></div></div></div><div class="copyright"><!-- react-text: 24 -->© <!-- /react-text --><!-- react-text: 37 -->2015<!-- /react-text --><!-- react-text: 25 --> npr<!-- /react-text --></div></section></article></div></div>
+
+<!-- END ID="PLAYER-ATTACH" -->
+<section id="global-modal-mount"></section>
+<!-- END ID="GLOBAL-MODAL-MOUNT" -->
+<script type="text/javascript">
+   (function () {
+    var loadPageJs = function () { webpackJsonp([66,24],{0:function(n,t,c){n.exports=c(1914)},1914:function(n,t,c){"use strict";c.p=NPR.serverVars.webpackPublicPath,function(){var n=2,t=function(){--n<1&&function(n){c(43),c(2291)}(c)}.bind(this);c.e(0,t),c.e(3,t)}.call(this)}}); };
+    if (document.readyState === 'complete') {
+        loadPageJs();
+    } else {
+        window.addEventListener('load', function load() {
+            window.removeEventListener('load', load, false);
+            loadPageJs();
+        });
+    }
+})();
+</script>
+</main><noscript><iframe><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1621557368158968&ev=PageView&noscript=1" /></iframe></noscript><iframe src="./a11107397707.html" hidden="" tabindex="-1" title="Optimizely Internal Frame" height="0" width="0" style="display: none;"></iframe><div id="loading-bar" style="width: 100%; height: 4px; z-index: 9999; top: 0px; float: left; position: fixed;"><div style="background-color: rgb(109, 138, 196); width: 0px; height: 100%; clear: both; transition: height 0.3s ease 0s; float: left;"></div></div></body></html>

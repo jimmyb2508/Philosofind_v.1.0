@@ -41,27 +41,20 @@ import Footer from './components/Footer';
 
 
 import ancientBG from '../src/images/ancientBG.jpg'
-import andromedaBG from '../src/images/andromedaBG.jpeg'
 import artistsBG from '../src/images/artistsBG.jpg'
-import earthBG from '../src/images/earthBG.jpeg'
-import enlightenmentBG from '../src/images/enlightenmentBG.jpg'
+import enlightenment_BG from '../src/images/enlightenment_BG.jpg'
 import modernBG from '../src/images/modernBG.jpg'
-import moonBG from '../src/images/moonBG.jpeg'
-import nebulaBG from '../src/images/nebulaBG.jpeg'
 import philosofindBG from '../src/images/philosofindBG.jpg'
-import romanBG from '../src/images/romanBG.jpeg'
 import scientistsBG from '../src/images/scientistsBG.jpg'
-import sunsetBG from '../src/images/sunsetBG.jpeg'
 
 class App extends Component {
   render() {
     return (
       <>
-        <BackgroundSlider
-          images={[ancientBG, andromedaBG, artistsBG, enlightenmentBG, earthBG, modernBG, moonBG, nebulaBG, philosofindBG, romanBG, scientistsBG, sunsetBG]}
+        <BackgroundSlider className="background_image"
+          images={[ancientBG, artistsBG, enlightenment_BG, modernBG, philosofindBG, scientistsBG]}
           duration={10} transition={3} />
         <div className="App">
-
           <div className="NavBar">
             <NavBar />
             <div className="Header">
@@ -140,32 +133,32 @@ class App extends Component {
           </Router>
           <Router>
             <Route exact path="/ancient">
-              <div className="ancient-author">
+              <div className="author__ancient">
                 <AncientAuthor />
               </div>
             </Route>
             <Route exact path="/enlightenment">
-              <div className="enlightenment-author">
+              <div className="author__enlightenment">
                 <EnlightenmentAuthor />
               </div>
             </Route>
             <Route exact path="/modern">
-              <div className="modern-author">
+              <div className="author__modern">
                 <ModernAuthor />
               </div>
             </Route>
             <Route exact path="/artists">
-              <div className="artists-author">
+              <div className="author__artists">
                 <ArtistsAuthor />
               </div>
             </Route>
             <Route exact path="/entrepreneurs">
-              <div className="entrepreneurs-author">
+              <div className="author__entrepreneurs">
                 <EntrepreneursAuthor />
               </div>
             </Route>
             <Route exact path="/scientists">
-              <div className="scientists-author">
+              <div className="author__scientists">
                 <ScientistsAuthor />
               </div>
             </Route>
