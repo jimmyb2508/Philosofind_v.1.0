@@ -39,7 +39,6 @@ import Wikipedia from './components/Wikipedia';
 import Books from './components/Books';
 import Footer from './components/Footer';
 
-
 import ancientBG from '../src/images/ancientBG.jpg'
 import artistsBG from '../src/images/artistsBG.jpg'
 import enlightenment_BG from '../src/images/enlightenment_BG.jpg'
@@ -101,32 +100,32 @@ class App extends Component {
               </div>
             </Route>
             <Route exact path="/ancient">
-              <div className="categories-ancient">
+              <div className="categories__ancient">
                 <CategoriesAncient />
               </div>
             </Route>
             <Route exact path="/enlightenment">
-              <div className="categories-enlightenment">
+              <div className="categories__enlightenment">
                 <CategoriesEnlightenment />
               </div>
             </Route>
             <Route exact path="/modern">
-              <div className="categories-modern">
+              <div className="categories__modern">
                 <CategoriesModern />
               </div>
             </Route>
             <Route exact path="/artists">
-              <div className="categories-artists">
+              <div className="categories__artists">
                 <CategoriesArtists />
               </div>
             </Route>
             <Route exact path="/entrepreneurs">
-              <div className="categories-entrepreneurs">
+              <div className="categories__entrepreneurs">
                 <CategoriesEntrepreneurs />
               </div>
             </Route>
             <Route exact path="/scientists">
-              <div className="categories-scientists">
+              <div className="categories__scientists">
                 <CategoriesScientists />
               </div>
             </Route>

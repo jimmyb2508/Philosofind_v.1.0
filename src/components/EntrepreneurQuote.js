@@ -44,7 +44,7 @@ class EntrepreneurQuote extends Component {
           <h1 className="randomquote">{quote} - {author}</h1>
         </div>
         <div className="buttons">
-          <Button buttonDisplayName="New Quote" clickHandler={this.getNewQuote} />
+          <Button buttonDisplayName="Philosofind" clickHandler={this.getNewQuote} />
           <TwitterShare quote={quote} author={author} />
         </div>
       </div>

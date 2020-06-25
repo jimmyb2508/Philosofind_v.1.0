@@ -17,7 +17,7 @@ const EnlightenmentBox = () => {
         className="background_image"
         images={[enlightenment_BG, enlightenmentBG_3, enlightenmentBG_4, enlightenmentBG_5, enlightenmentBG_6, enlightenmentBG_7]}
         duration={10}
-        transition={3}
+        transition={2}
       />
       <div className="randomcontainer">
         <EnlightenmentQuote className="EnlightenmentQuote" />

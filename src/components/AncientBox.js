@@ -6,6 +6,8 @@ import philosofindBG from '../images/philosofindBG.jpg';
 import ancientBG_3 from '../images/ancientBG_3.jpg';
 import ancientBG_4 from '../images/ancientBG_4.jpg';
 import ancientBG_5 from '../images/ancientBG_5.jpg';
+import romanBG from '../images/romanBG.jpeg';
+import buddhaBG from '../images/buddhaBG.jpeg';
 
 import '../styles/sass/layout/_categories.scss';
 
@@ -14,9 +16,9 @@ const AncientBox = () => {
     <>
       <BackgroundSlider
         className="background_image"
-        images={[ancientBG, philosofindBG, ancientBG_3, ancientBG_4, ancientBG_5]}
+        images={[ancientBG, philosofindBG, ancientBG_3, ancientBG_4, ancientBG_5, romanBG, buddhaBG]}
         duration={10}
-        transition={3}
+        transition={2}
       />
       <div className="randomcontainer">
         <AncientQuote className="AncientQuote" />

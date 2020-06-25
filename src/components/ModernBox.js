@@ -13,7 +13,7 @@ const ModernBox = () => {
         className="background_image"
         images={[modernBG, modernBG_2]}
         duration={10}
-        transition={3}
+        transition={2}
       />
       <div className="randomcontainer">
         <ModernQuote className="ModernQuote" />
