@@ -177,6 +177,12 @@ class ArtistsAuthor extends React.Component {
                                                         console.log(res)
                                                         this.setState({ quotes: res.data })
                                                       })
+                                                    } else {
+                                                      if (event.target.value === 'Geoffrey Chaucer') {
+                                                        axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Emile Zola`).then(res => {
+                                                          this.setState({ quotes: res.data })
+                                                        })
+                                                      }
                                                     }
                                                   }
                                                 }
@@ -223,6 +229,7 @@ class ArtistsAuthor extends React.Component {
             <option value="J.S. Bach">J.S. Bach</option>
             <option value="Ludwig Van Beethoven">Ludwig Van Beethoven</option>
             <option value="William Blake">William Blake</option>
+            <option value="Geoffrey Chaucer">Geoffrey Chaucer</option>
             <option value="Frederic Chopin">Frederic Chopin</option>
             <option value="Kurt Cobain">Kurt Cobain</option>
             <option value="Samuel Taylor Coleridge">Samuel Taylor Coleridge</option>

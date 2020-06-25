@@ -98,6 +98,50 @@ class AncientAuthor extends React.Component {
                               console.log(res)
                               this.setState({ quotes: res.data })
                             })
+                          } else {
+                            if (event.target.value === 'Hypatia') {
+                              axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Hypatia`).then(res => {
+                                console.log(res)
+                                this.setState({ quotes: res.data })
+                              })
+                            } else {
+                              if (event.target.value === 'Muhammad') {
+                                axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Muhammad`).then(res => {
+                                  console.log(res)
+                                  this.setState({ quotes: res.data })
+                                })
+                              } else {
+                                if (event.target.value === 'Greek Proverb') {
+                                  axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Greek Proverb`).then(res => {
+                                    this.setState({ quotes: res.data })
+                                  })
+                                } else {
+                                  if (event.target.value === 'Euclid') {
+                                    axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Euclid`).then(res => {
+                                      this.setState({ quotes: res.data })
+                                    })
+                                  } else {
+                                    if (event.target.value === 'Augustine of Hippo') {
+                                      axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Augustine of Hippo`).then(res => {
+                                        this.setState({ quotes: res.data })
+                                      })
+                                    } else {
+                                      if (event.target.value === 'Confucious') {
+                                        axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Confucious`).then(res => {
+                                          this.setState({ quotes: res.data })
+                                        })
+                                      } else {
+                                        if (event.target.value === 'Epictetus') {
+                                          axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Epictetus`).then(res => {
+                                            this.setState({ quotes: res.data})
+                                          })
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
                           }
                         }
                       }
@@ -129,11 +173,18 @@ class AncientAuthor extends React.Component {
             <option value="Select Author...">Select Author...</option>
             <option value="Alexander the Great">Alexander the Great</option>
             <option value="Aristotle">Aristotle</option>
+            <option value="Augustine of Hippo">Augustine of Hippo</option>
+            <option value="Confucious">Confucious</option>
             <option value="Democritus">Democritus</option>
+            <option value="Epictetus">Epictetus</option>
             <option value="Epicurus">Epicurus</option>
+            <option value="Euclid">Euclid</option>
             <option value="Gautama Buddha">Gautama Buddha</option>
+            <option value="Greek Proverb">Greek Proverb</option>
+            <option value="Hypatia">Hypatia</option>
             <option value="Jesus Christ">Jesus Christ</option>
             <option value="Lao Tzu">Lao Tzu</option>
+            <option value="Muhammad">Muhammad</option>
             <option value="Plato">Plato</option>
             <option value="Protagoras">Protagoras</option>
             <option value="Seneca">Seneca</option>

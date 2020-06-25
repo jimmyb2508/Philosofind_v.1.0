@@ -28,8 +28,8 @@ class EntrepreneursAuthor extends React.Component {
       author: event.target.value
     });
     console.log(event.target.value)
-    if (event.target.value === 'Graham Bell') {
-      axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Graham Bell`).then(res => {
+    if (event.target.value === 'Alexander Graham Bell') {
+      axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Alexander Graham Bell`).then(res => {
         console.log(res)
         this.setState({ quotes: res.data });
       })
@@ -82,45 +82,42 @@ class EntrepreneursAuthor extends React.Component {
                         this.setState({ quotes: res.data })
                       })
                     } else {
-                      if (event.target.value === 'Ted Hughes') {
-                        axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Ted Hughes`).then(res => {
+                      if (event.target.value === 'Anne Wojcicki') {
+                        axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Anne Wojcicki`).then(res => {
                           console.log(res)
                           this.setState({ quotes: res.data })
                         })
                       } else {
-                        if (event.target.value === 'L.S. Lowry') {
-                          axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/L.S. Lowry`).then(res => {
-                            console.log(res)
+                        if (event.target.value === 'Larry Page') {
+                          axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Larry Page`).then(res => {
                             this.setState({ quotes: res.data })
                           })
                         } else {
-                          if (event.target.value === 'Freddie Mercury') {
-                            axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Freddie Mercury`).then(res => {
+                          if (event.target.value === 'Michael Dell') {
+                            axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Michael Dell`).then(res => {
                               console.log(res)
                               this.setState({ quotes: res.data })
                             })
                           } else {
-                            if (event.target.value === 'Claude Monet') {
-                              axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Claude Monet`).then(res => {
+                            if (event.target.value === 'Pierre Omidyar') {
+                              axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Pierre Omidyar`).then(res => {
                                 console.log(res)
                                 this.setState({ quotes: res.data })
                               })
                             } else {
-                              if (event.target.value === 'George Orwell') {
-                                axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/George Orwell`).then(res => {
+                              if (event.target.value === 'Jeff Bezos') {
+                                axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Jeff Bezos`).then(res => {
                                   console.log(res)
                                   this.setState({ quotes: res.data })
                                 })
                               } else {
-                                if (event.target.value === 'Pablo Picasso') {
-                                  axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Pablo Picasso`).then(res => {
-                                    console.log(res)
+                                if (event.target.value === 'Mark Zuckerberg') {
+                                  axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Mark Zuckerberg`).then(res => {
                                     this.setState({ quotes: res.data })
                                   })
                                 } else {
-                                  if (event.target.value === 'Rembrandt Van Rijn') {
-                                    axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Rembrandt Van Rijn`).then(res => {
-                                      console.log(res)
+                                  if (event.target.value === 'Gordon Moore') {
+                                    axios.get(`https://murmuring-depths-99830.herokuapp.com/quotes/Gordon Moore`).then(res => {
                                       this.setState({ quotes: res.data })
                                     })
                                   } else {
@@ -219,15 +216,22 @@ class EntrepreneursAuthor extends React.Component {
             value={this.state.author}
             onChange={this.storeAuthor}>
             <option value="Select Author...">Select Author...</option>
-            <option value="Graham Bell">Graham Bell</option>
+            <option value="Alexander Graham Bell">Alexander Graham Bell</option>
+            <option value="Jeff Bezos">Jeff Bezos</option>
             <option value="Sally Berger">Sally Berger</option>
+            <option value="Michael Dell">Michael Dell</option>
             <option value="Thomas Eddison">Thomas Eddison</option>
             <option value="Bill Gates">Bill Gates</option>
             <option value="Kylie Jenner">Kylie Jenner</option>
             <option value="Steve Jobs">Steve Jobs</option>
             <option value="Marissa Meyer">Marissa Meyer</option>
+            <option value="Gordon Moore">Gordon Moore</option>
+            <option value="Pierre Omidyar">Pierre Omidyar</option>
+            <option value="Larry Page">Larry Page</option>
             <option value="Jim Rohn">Jim Rohn</option>
             <option value="Gloria Steinem">Gloria Steinem</option>
+            <option value="Anne Wojcicki">Anne Wojcicki</option>
+            <option value="Mark Zuckerberg">Mark Zuckerberg</option>
           </select>
         </label>
         <button onClick={this.resetDropdown} className="reset-dropdown">Reset</button>
