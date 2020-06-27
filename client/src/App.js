@@ -21,6 +21,7 @@ import CategoriesEnlightenment from './components/Categories/CategoriesEnlighten
 import CategoriesModern from './components/Categories/CategoriesModern';
 import CategoriesArtists from './components/Categories/CategoriesArtists';
 import CategoriesScientists from './components/Categories/CategoriesScientists';
+import PhilosofindAuthor from './components/AuthorDropDown/PhilosofindAuthor';
 import AncientAuthor from './components/AuthorDropDown/AncientAuthor';
 import EnlightenmentAuthor from './components/AuthorDropDown/EnlightenmentAuthor';
 import ModernAuthor from './components/AuthorDropDown/ModernAuthor';
@@ -131,6 +132,11 @@ class App extends Component {
             </Route>
           </Router>
           <Router>
+            <Route exact path="/">
+              <div className="author__philosofind">
+                <PhilosofindAuthor />
+              </div>
+            </Route>
             <Route exact path="/ancient">
               <div className="author__ancient">
                 <AncientAuthor />
