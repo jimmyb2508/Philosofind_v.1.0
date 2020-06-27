@@ -21,6 +21,7 @@ import CategoriesEnlightenment from './components/Categories/CategoriesEnlighten
 import CategoriesModern from './components/Categories/CategoriesModern';
 import CategoriesArtists from './components/Categories/CategoriesArtists';
 import CategoriesScientists from './components/Categories/CategoriesScientists';
+import PhilosofindAuthor from './components/AuthorDropDown/PhilosofindAuthor';
 import AncientAuthor from './components/AuthorDropDown/AncientAuthor';
 import EnlightenmentAuthor from './components/AuthorDropDown/EnlightenmentAuthor';
 import ModernAuthor from './components/AuthorDropDown/ModernAuthor';
@@ -43,7 +44,7 @@ import ancientBG from '../src/images/ancientBG.jpg'
 import artistsBG from '../src/images/artistsBG.jpg'
 import enlightenment_BG from '../src/images/enlightenment_BG.jpg'
 import modernBG from '../src/images/modernBG.jpg'
-import philosofindBG from '../src/images/philosofindBG.jpg'
+import ancientBG_2 from '../src/images/ancientBG_2.jpg'
 import scientistsBG from '../src/images/scientistsBG.jpg'
 
 class App extends Component {
@@ -51,7 +52,7 @@ class App extends Component {
     return (
       <>
         <BackgroundSlider className="background_image"
-          images={[ancientBG, artistsBG, enlightenment_BG, modernBG, philosofindBG, scientistsBG]}
+          images={[ancientBG, artistsBG, enlightenment_BG, modernBG, ancientBG_2, scientistsBG]}
           duration={10} transition={3} />
         <div className="App">
           <div className="NavBar">
@@ -131,6 +132,11 @@ class App extends Component {
             </Route>
           </Router>
           <Router>
+            <Route exact path="/">
+              <div className="author__philosofind">
+                <PhilosofindAuthor />
+              </div>
+            </Route>
             <Route exact path="/ancient">
               <div className="author__ancient">
                 <AncientAuthor />
