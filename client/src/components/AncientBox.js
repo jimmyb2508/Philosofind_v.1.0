@@ -9,6 +9,7 @@ import ancientBG_5 from '../images/ancientBG_5.jpg';
 import ancientBG_6 from '../images/ancientBG_6.jpg';
 import ancientBG_7 from '../images/ancientBG_7.jpg';
 import ancientBG_8 from '../images/ancientBG_8.jpg';
+import ancientBG_9 from '../images/ancientBG_9.jpg';
 
 import '../styles/sass/layout/_categories.scss';
 
@@ -17,7 +18,7 @@ const AncientBox = () => {
     <>
       <BackgroundSlider
         className="background_image"
-        images={[ancientBG, ancientBG_2, ancientBG_3, ancientBG_4, ancientBG_5, ancientBG_6, ancientBG_7, ancientBG_8]}
+        images={[ancientBG, ancientBG_2, ancientBG_3, ancientBG_4, ancientBG_5, ancientBG_6, ancientBG_7, ancientBG_8, ancientBG_9]}
         duration={10}
         transition={2}
       />
