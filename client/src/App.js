@@ -43,7 +43,7 @@ import ancientBG from '../src/images/ancientBG.jpg'
 import artistsBG from '../src/images/artistsBG.jpg'
 import enlightenment_BG from '../src/images/enlightenment_BG.jpg'
 import modernBG from '../src/images/modernBG.jpg'
-import philosofindBG from '../src/images/philosofindBG.jpg'
+import ancientBG_2 from '../src/images/ancientBG_2.jpg'
 import scientistsBG from '../src/images/scientistsBG.jpg'
 
 class App extends Component {
@@ -51,7 +51,7 @@ class App extends Component {
     return (
       <>
         <BackgroundSlider className="background_image"
-          images={[ancientBG, artistsBG, enlightenment_BG, modernBG, philosofindBG, scientistsBG]}
+          images={[ancientBG, artistsBG, enlightenment_BG, modernBG, ancientBG_2, scientistsBG]}
           duration={10} transition={3} />
         <div className="App">
           <div className="NavBar">
