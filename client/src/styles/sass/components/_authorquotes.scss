@@ -1,0 +1,52 @@
+.author {
+    display: flex;
+    &__ancient {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__enlightenment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__modern {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__artists {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__entrepreneurs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__scientists {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.reset-dropdown {
+    color: black;
+    height: 100%;
+    margin-left: .4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+    padding: .23rem 2rem;
+    border-radius: 500px;
+    transition: all .3s;
+    border: none;
+    cursor: pointer;
+}
