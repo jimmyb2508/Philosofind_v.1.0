@@ -7,7 +7,7 @@ import modernBG_3 from '../images/modernBG_3.jpg';
 import modernBG_4 from '../images/modernBG_4.jpg';
 import modernBG_5 from '../images/modernBG_5.jpg';
 import modernBG_6 from '../images/modernBG_6.jpeg';
-import modernBG_7 from '../images/modernBG_7.jpg';
+import modernBG_7 from '../images/modernBG_7.png';
 import modernBG_8 from '../images/modernBG_8.jpg';
 
 import '../styles/sass/layout/_categories.scss';
