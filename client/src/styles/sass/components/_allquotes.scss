@@ -1,14 +1,32 @@
 .allquote {
   &__container {
     padding-bottom: 4rem;
+    // border: solid 2px blue;
   }
 
   &__content {
     padding-top: 2rem;
+    // border: solid 2px red;
+  }
+
+  ul {
+    margin-right: 40px;
+    margin-left: 40px;
+    // border: solid 2px black;
+    // display: flex;
   }
   
   li {
     font-family: 'sans-serif', sans-serif;
     text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    position:relative;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.15);
+    
+  }
+
+  .quote_card {
+    padding: 25px;
   }
 }

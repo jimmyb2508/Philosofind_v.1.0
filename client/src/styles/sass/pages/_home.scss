@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
 .randomcontainer {
     display: flex;
     justify-content: center;
@@ -14,8 +16,8 @@
     border-radius: 1rem;
     max-width: 85vw;
     width: 55rem;
-    background-color: rgba(0, 0, 0, .091);
-    color:#fff;
+    background-color:rgba(255, 255, 255, 0.75);
+    color: black;
     padding: 0.5rem; 
 
     @media only screen and (max-width: 900px) {

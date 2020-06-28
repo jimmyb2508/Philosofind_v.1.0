@@ -41,7 +41,7 @@ import Books from './components/Books';
 import Footer from './components/Footer';
 
 import ancientBG from '../src/images/ancientBG.jpg'
-import artistsBG from '../src/images/artistsBG.jpg'
+import artistsBG_6 from '../src/images/artistsBG_6.jpg'
 import enlightenment_BG from '../src/images/enlightenment_BG.jpg'
 import modernBG from '../src/images/modernBG.jpg'
 import ancientBG_2 from '../src/images/ancientBG_2.jpg'
@@ -52,7 +52,7 @@ class App extends Component {
     return (
       <>
         <BackgroundSlider className="background_image"
-          images={[ancientBG, artistsBG, enlightenment_BG, modernBG, ancientBG_2, scientistsBG]}
+          images={[ancientBG, enlightenment_BG, modernBG, artistsBG_6, ancientBG_2, scientistsBG]}
           duration={10} transition={3} />
         <div className="App">
           <div className="NavBar">

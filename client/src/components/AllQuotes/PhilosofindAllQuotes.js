@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import TwitterShare from '../TwitterShare';
 
 import '../../styles/sass/components/_allquotes.scss'
 
@@ -31,7 +32,8 @@ class PhilosofindAllQuotes extends Component {
       <div className="allquotes__wrapper">
         <ul>
           {this.state.quotes.map(quote => (
-            <li key={quote._id}>{quote.quote} - {quote.author}</li>
+            <li className="quote_card" key={quote._id}>{quote.quote} - {quote.author}
+            <TwitterShare quote={quote.quote} author={quote.author}/></li>
           ))}
         </ul>
       </div>
