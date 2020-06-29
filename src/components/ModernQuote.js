@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import Button from './Button';
-import TwitterShare from './TwitterShare';
+import { 
+  FacebookShareButton, 
+  TwitterShareButton
+} from "react-share";
+import {
+  FacebookIcon,
+  TwitterIcon
+ } from "react-share";
 
 import '../styles/sass/layout/_categories.scss';
+
+const shareUrl = "https://philosofind.co.uk/"
 
 class ModernQuote extends Component {
   constructor(props) {
@@ -45,7 +54,14 @@ class ModernQuote extends Component {
         </div>
         <div className="buttons">
           <Button buttonDisplayName="Philosofind" clickHandler={this.getNewQuote} />
-          <TwitterShare quote={quote} author={author} />
+          <div className="social">
+            <TwitterShareButton className="twit-social" url={shareUrl} title={quote + ' - ' + author}>
+              <TwitterIcon size={32} round={true}/>
+            </TwitterShareButton>
+            <FacebookShareButton className="fb-social" url={shareUrl} quote={quote + ' - ' + author}>
+              <FacebookIcon size={32} round={true}/>
+            </FacebookShareButton>
+          </div>
         </div>
       </div>
     )
